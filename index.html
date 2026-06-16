@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelica Denise Mico Ariola | Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+  :root{
+    --dark-green:#1b3326;
+    --mid-green:#2f4f3e;
+    --light-green-bg:#eef2e6;
+    --gold:#c9a23a;
+    --gold-light:#d9c08a;
+    --text-dark:#1e2a22;
+  }
+  body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text-dark);
+  }
+  h1,h2,h3,.font-display{
+    font-family:'Playfair Display',serif;
+  }
+  /* Navbar */
+  .navbar-custom{
+    background:#000;
+  }
+  .navbar-custom .nav-link{
+    color:#f5f5f5 !important;
+    font-family:'Playfair Display',serif;
+    font-size:1.05rem;
+    margin:0 .6rem;
+  }
+  .navbar-custom .nav-link:hover{
+    color:var(--gold-light) !important;
+  }
+  .logo-circle{
+    width:46px;height:46px;border:2px solid var(--gold-light);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;
+  }
+  .btn-outline-gold{
+    border:1px solid var(--gold-light);
+    color:#f5f5f5;
+    font-family:'Playfair Display',serif;
+    background:transparent;
+  }
+  .btn-outline-gold:hover{
+    background:var(--gold-light);
+    color:#000;
+  }
+  /* Hero */
+  .hero-section{
+    background:var(--dark-green);
+    color:#f5f5f5;
+    padding:2.5rem 0;
+  }
+  .hero-section .eyebrow{
+    color:var(--gold-light);
+    font-style:italic;
+    font-family:'Playfair Display',serif;
+    font-size:1.3rem;
+    margin-bottom:.3rem;
+  }
+  .hero-section h1{
+    font-size:2.8rem;
+    font-weight:700;
+    line-height:1.2;
+  }
+  .hero-section .subtitle{
+    color:var(--gold-light);
+    font-family:'Playfair Display',serif;
+  }
+  .hero-photo{
+    background:#d9d9d9;
+    border-radius:8px;
+    width:100%;
+    aspect-ratio:1/1;
+    max-width:280px;
+    overflow:hidden;
+  }
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .btn-cta{
+    background:var(--mid-green);
+    color:#f5f5f5;
+    border:1px solid rgba(255,255,255,.15);
+    font-family:'Playfair Display',serif;
+    padding:.6rem 1.8rem;
+  }
+  .btn-cta:hover{
+    background:var(--gold);
+    color:#1b3326;
+  }
+  /* Section titles */
+  .section-title{
+    color:var(--dark-green);
+    font-weight:700;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    margin-bottom:1.2rem;
+  }
+  .section-padding{
+    padding:2.5rem 0;
+  }
+  .panel-soft{
+    background:var(--light-green-bg);
+    border:1px solid #dde6cf;
+    border-radius:10px;
+    padding:1.5rem;
+  }
+  /* Badge */
+  .badge-dean{
+    background:var(--dark-green);
+    color:var(--gold-light);
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:.85rem;
+    padding:.4rem 1rem;
+    border-radius:30px;
+  }
+  .strength-list, .org-list{
+    list-style:none;
+    padding-left:0;
+  }
+  .strength-list li, .org-list li{
+    padding:.2rem 0;
+  }
+  .strength-list li::before, .org-list li::before{
+    content:"- ";
+  }
+  /* Timeline */
+  .timeline-wrapper{
+    position:relative;
+    padding-top:.5rem;
+  }
+  .timeline-line{
+    position:absolute;
+    top:32px;
+    left:0;
+    right:0;
+    height:2px;
+    background:var(--dark-green);
+    z-index:0;
+  }
+  .timeline-dot{
+    width:24px;height:24px;
+    border-radius:50%;
+    background:var(--dark-green);
+    border:3px solid var(--gold-light);
+    margin:0 auto 1rem;
+    position:relative;
+    z-index:1;
+  }
+  .timeline-item{
+    text-align:center;
+    font-size:.9rem;
+  }
+  .timeline-item .school{
+    color:#7a9b6e;
+    font-style:italic;
+    font-family:'Playfair Display',serif;
+  }
+  /* Cards */
+  .exp-card, .skills-card{
+    background:var(--light-green-bg);
+    border:1px solid #dde6cf;
+    border-radius:10px;
+    padding:1.5rem;
+  }
+  .exp-card ul, .skills-card ul{
+    padding-left:1.2rem;
+    margin-bottom:0;
+  }
+  .exp-card ul li, .skills-card ul li{
+    list-style:disc;
+    padding:.3rem 0;
+    line-height:1.5;
+  }
+  .skills-card h3{
+    margin-top:1.2rem;
+  }
+  .skills-card h3:first-of-type{
+    margin-top:0;
+  }
+  .exp-card h3{
+    font-size:1.1rem;
+  }
+  .exp-card p{
+    margin-bottom:.3rem;
+  }
+  .exp-card ul{
+    margin-top:1.2rem;
+  }
+  .hobby-card{
+    background:#fff;
+    border:1px solid #e3e3e3;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    min-height:100px;
+    padding:1rem;
+    font-weight:500;
+    transition:all .2s ease;
+  }
+  .hobby-card:hover{
+    border-color:var(--gold-light);
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    transform:translateY(-2px);
+  }
+  .hobby-wide{
+    grid-column:1/-1;
+  }
+  /* Values */
+  .values-section{
+    background:var(--light-green-bg);
+    border-top:1px solid #d6d6c0;
+    border-bottom:1px solid #d6d6c0;
+  }
+  .value-dot{
+    width:12px;height:12px;border-radius:50%;
+    background:var(--gold-light);
+    margin:0 auto 1.2rem;
+  }
+  .value-item p{
+    color:#5a6b5e;
+    line-height:1.6;
+  }
+  /* Footer / contact */
+  .footer-section{
+    background:var(--dark-green);
+    color:#f5f5f5;
+  }
+  .footer-section h6{
+    color:var(--gold-light);
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .footer-label{
+    color:var(--gold-light);
+    font-weight:600;
+    min-width:80px;
+    display:inline-block;
+  }
+  .footer-section .form-control{
+    border-radius:6px;
+    border:none;
+    padding:.7rem 1rem;
+  }
+  .quote-block{
+    border-left:3px solid var(--gold-light);
+    padding-left:1rem;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    color:var(--gold-light);
+  }
+  .footer-bottom{
+    background:#142019;
+    color:#a9b8ad;
+    font-size:.85rem;
+    text-align:center;
+    padding:1rem 0;
+  }
+  @media (max-width: 767px){
+    .hero-section h1{font-size:2rem;}
+    .timeline-line{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <div class="logo-circle">AD</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
+          <a href="#" class="btn btn-outline-gold btn-sm px-3">Download Resume</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <p class="eyebrow mb-1">Hello! I'm,</p>
+        <h1 class="font-display mb-0">Angelica Denise</h1>
+        <h1 class="font-display mb-2">Mico Ariola</h1>
+        <p class="subtitle mb-3">Student Leader &middot; Aspiring IT Professional &middot; Lifelong Learner</p>
+        <p class="mb-3" style="max-width:600px;">
+          I'm a BSIT student who believes that hard work and determination matter more than
+          natural talent. I love learning, I don't shy away from challenges, and I always try my best
+          in everything I do.
+        </p>
+        <a href="#about" class="btn btn-cta">About Me</a>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-lg-end">
+        <div class="hero-photo">
+          <!-- Replace the src below with the link to your photo -->
+          <img src="D:\HCI Finals\images\photo.png" alt="Profile photo">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT + ACADEMIC ACHIEVEMENTS -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <h2 class="section-title h4">About Me</h2>
+        <div class="panel-soft">
+          <p>I am a second-year Bachelor of Science in Information Technology student at Polytechnic University of the Philippines &ndash; Sto. Tomas Campus.</p>
+          <p>I may not be the most naturally talented person, but I believe that when I set my mind on something, I can make it work. I love learning new things and I always give my full effort no matter the challenge.</p>
+          <p class="mb-0">Outside of school, I enjoy learning musical instruments, singing, writing, reading, and helping out at home.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title h4">Academic Achievements</h2>
+        <div class="panel-soft">
+          <span class="badge-dean d-inline-block mb-3">Dean's Lister</span>
+          <h3 class="h5 fw-semibold">Academic Excellence</h3>
+          <p>Recognized for consistent performance throughout the BSIT program at PUP Sto. Tomas.</p>
+          <hr>
+          <div class="row">
+            <div class="col-6">
+              <h4 class="h6 fw-semibold">Strengths</h4>
+              <ul class="strength-list">
+                <li>Information Technology</li>
+                <li>Team Collaboration</li>
+                <li>Communication</li>
+                <li>Problem Solving</li>
+                <li>Time Management</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h4 class="h6 fw-semibold">Organizations</h4>
+              <ul class="org-list">
+                <li>Supreme Student Government</li>
+                <li>Class Organization</li>
+                <li>Academic Activities &amp; Student Programs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP TIMELINE -->
+<section id="leadership" class="section-padding border-top">
+  <div class="container">
+    <h2 class="section-title h4">Leadership Journey</h2>
+    <div class="timeline-wrapper position-relative">
+      <div class="timeline-line d-none d-md-block"></div>
+      <div class="row text-center gx-2 gy-4">
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>Grade 1&ndash;2</strong><br>
+            Class Treasurer<br>
+            <span class="school">Pantay Elem.</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>Grade 3</strong><br>
+            Class PIO<br>
+            PIO &ndash; SSG<br>
+            <span class="school">Pantay Elem.</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>Grade 4</strong><br>
+            Class President<br>
+            VP &ndash; SSG<br>
+            <span class="school">Pantay Elem.</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>Grade 6</strong><br>
+            Class VP<br>
+            SSG Treasurer<br>
+            <span class="school">Tanauan Institute</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>Grade 11&ndash;12</strong><br>
+            Class Monitor<br>
+            Nom. President &ndash; STEM<br>
+            No. Secretary &ndash; SHS<br>
+            <span class="school">Tanauan Institute</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>1st Year</strong><br>
+            Class VP<br>
+            <span class="school">PUP Sto.Tomas</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <strong>2nd Year</strong><br>
+            Class VP<br>
+            COMSOC PRO 2-2<br>
+            <span class="school">PUP Sto. Tomas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK EXPERIENCE / SKILLS / HOBBIES -->
+<section id="experience" class="section-padding border-top">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-lg-4">
+        <h2 class="section-title h4">Work Experience</h2>
+        <div class="exp-card">
+          <h3 class="h6 fw-bold mb-1">Service Crew &mdash; McDonald's</h3>
+          <p class="mb-1">Tanauan&ndash;Talisay Road</p>
+          <p class="mb-3">August 2025 &ndash; September 2026</p>
+          <ul class="mb-0">
+            <li>Assisted customers professionally</li>
+            <li>Maintained cleanliness of work areas</li>
+            <li>Prepared food per company standards</li>
+            <li>Worked in a fast-paced environment</li>
+            <li>Collaborated with team members</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h2 class="section-title h4">Skills</h2>
+        <div class="skills-card">
+          <h3 class="h6 fw-bold">Technical</h3>
+          <ul>
+            <li>Microsoft Word / PowerPoint / Excel</li>
+            <li>Canva / Figma</li>
+            <li>HTML / CSS / Basic JavaScript</li>
+            <li>UI/UX Design</li>
+          </ul>
+          <h3 class="h6 fw-bold mt-3">Soft Skills</h3>
+          <ul class="mb-0">
+            <li>Leadership &amp; Communication</li>
+            <li>Teamwork &amp; Adaptability</li>
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4" id="hobbies">
+        <h2 class="section-title h4">Hobbies &amp; Interests</h2>
+        <div class="d-grid gap-3" style="grid-template-columns:1fr 1fr;">
+          <div class="hobby-card">Learning Musical Instruments</div>
+          <div class="hobby-card">Singing</div>
+          <div class="hobby-card">Reading</div>
+          <div class="hobby-card">Writing</div>
+          <div class="hobby-card hobby-wide">Household Activities</div>
+          <div class="hobby-card">Travelling</div>
+          <div class="hobby-card">Photography</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAL VALUES -->
+<section class="values-section section-padding">
+  <div class="container">
+    <h2 class="section-title h4 text-center">Personal Values</h2>
+    <div class="row text-center g-4 mt-3">
+      <div class="col-6 col-md-3 value-item">
+        <div class="value-dot"></div>
+        <h3 class="h6 fw-bold">Determined</h3>
+        <p class="small mb-0">I keep going toward my goals no matter how hard the road gets.</p>
+      </div>
+      <div class="col-6 col-md-3 value-item">
+        <div class="value-dot"></div>
+        <h3 class="h6 fw-bold">Responsible</h3>
+        <p class="small mb-0">I take ownership of my tasks and commitments.</p>
+      </div>
+      <div class="col-6 col-md-3 value-item">
+        <div class="value-dot"></div>
+        <h3 class="h6 fw-bold">Growth-Oriented</h3>
+        <p class="small mb-0">I continuously seek opportunities to learn and improve.</p>
+      </div>
+      <div class="col-6 col-md-3 value-item">
+        <div class="value-dot"></div>
+        <h3 class="h6 fw-bold">Service-Driven</h3>
+        <p class="small mb-0">I find fulfillment in helping and contributing to others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="footer-section section-padding">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <h6 class="mb-3">Let's Connect</h6>
+        <p><span class="footer-label">Email</span> ariolaangelicadenise@gmail.com</p>
+        <p><span class="footer-label">Phone</span> 0912 141 2462</p>
+        <p><span class="footer-label">Facebook</span> Angelicadenise Ariola</p>
+        <div class="quote-block mt-4">
+          "This world is full of nice people. If you can't find one, be one."
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h6 class="mb-3">Send a Message</h6>
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-cta">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  &copy; 2024 Angelica Denise Mico Ariola. All Rights Reserved.
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
