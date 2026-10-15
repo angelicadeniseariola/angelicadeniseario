@@ -15,6 +15,9 @@
     --gold-light:#d9c08a;
     --text-dark:#1e2a22;
   }
+  html{
+    scroll-behavior:smooth;
+  }
   body{
     font-family:'Poppins',sans-serif;
     color:var(--text-dark);
@@ -22,7 +25,6 @@
   h1,h2,h3,.font-display{
     font-family:'Playfair Display',serif;
   }
-  /* Navbar */
   .navbar-custom{
     background:#000;
   }
@@ -50,7 +52,6 @@
     background:var(--gold-light);
     color:#000;
   }
-  /* Hero */
   .hero-section{
     background:var(--dark-green);
     color:#f5f5f5;
@@ -97,7 +98,6 @@
     background:var(--gold);
     color:#1b3326;
   }
-  /* Section titles */
   .section-title{
     color:var(--dark-green);
     font-weight:700;
@@ -114,7 +114,6 @@
     border-radius:10px;
     padding:1.5rem;
   }
-  /* Badge */
   .badge-dean{
     background:var(--dark-green);
     color:var(--gold-light);
@@ -134,7 +133,6 @@
   .strength-list li::before, .org-list li::before{
     content:"- ";
   }
-  /* Timeline */
   .timeline-wrapper{
     position:relative;
     padding-top:.5rem;
@@ -166,7 +164,6 @@
     font-style:italic;
     font-family:'Playfair Display',serif;
   }
-  /* Cards */
   .exp-card, .skills-card{
     background:var(--light-green-bg);
     border:1px solid #dde6cf;
@@ -218,7 +215,6 @@
   .hobby-wide{
     grid-column:1/-1;
   }
-  /* Values */
   .values-section{
     background:var(--light-green-bg);
     border-top:1px solid #d6d6c0;
@@ -233,7 +229,6 @@
     color:#5a6b5e;
     line-height:1.6;
   }
-  /* Footer / contact */
   .footer-section{
     background:var(--dark-green);
     color:#f5f5f5;
@@ -276,7 +271,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
   <div class="container">
     <a class="navbar-brand" href="#home">
@@ -294,6 +288,8 @@
         <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
+        <a href="https://angelicadeniseariola.github.io/Web-Development/" target="_blank" class="btn btn-outline-gold btn-sm px-3">View Projects</a>        </li>
+        <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
           <a href="#" class="btn btn-outline-gold btn-sm px-3">Download Resume</a>
         </li>
       </ul>
@@ -301,7 +297,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header id="home" class="hero-section">
   <div class="container">
     <div class="row align-items-center g-4">
@@ -319,7 +314,6 @@
       </div>
       <div class="col-lg-4 d-flex justify-content-lg-end">
         <div class="hero-photo">
-          <!-- Replace the src below with the link to your photo -->
           <img src="./images/photo.png" alt="Profile photo">
         </div>
       </div>
@@ -327,7 +321,6 @@
   </div>
 </header>
 
-<!-- ABOUT + ACADEMIC ACHIEVEMENTS -->
 <section id="about" class="section-padding">
   <div class="container">
     <div class="row g-3">
@@ -372,7 +365,6 @@
   </div>
 </section>
 
-<!-- LEADERSHIP TIMELINE -->
 <section id="leadership" class="section-padding border-top">
   <div class="container">
     <h2 class="section-title h4">Leadership Journey</h2>
@@ -446,7 +438,6 @@
   </div>
 </section>
 
-<!-- WORK EXPERIENCE / SKILLS / HOBBIES -->
 <section id="experience" class="section-padding border-top">
   <div class="container">
     <div class="row g-3">
@@ -500,7 +491,6 @@
   </div>
 </section>
 
-<!-- PERSONAL VALUES -->
 <section class="values-section section-padding">
   <div class="container">
     <h2 class="section-title h4 text-center">Personal Values</h2>
@@ -529,7 +519,6 @@
   </div>
 </section>
 
-<!-- CONTACT / FOOTER -->
 <footer id="contact" class="footer-section section-padding">
   <div class="container">
     <div class="row g-3">
