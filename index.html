@@ -9,13 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap">
 <style>
   :root{
-    --dark-green:#1b3326;
-    --mid-green:#2f4f3e;
-    --deep:#142019;
-    --light-green-bg:#eef2e6;
-    --gold:#c9a23a;
-    --gold-light:#d9c08a;
-    --text-dark:#1e2a22;
+    --dark-green:#1b3326; --mid-green:#2f4f3e; --deep:#142019; --light-green-bg:#eef2e6;
+    --gold:#c9a23a; --gold-light:#d9c08a; --text-dark:#1e2a22;
   }
   html{ scroll-behavior:smooth; scroll-padding-top:80px; }
   body{ font-family:'Poppins',sans-serif; color:var(--text-dark); }
@@ -24,11 +19,7 @@
   .navbar-custom{ background:#000; }
   .navbar-custom .nav-link{ color:#f5f5f5 !important; font-family:'Playfair Display',serif; font-size:1.05rem; margin:0 .6rem; }
   .navbar-custom .nav-link:hover{ color:var(--gold-light) !important; }
-  .logo-circle{
-    width:46px;height:46px;border:2px solid var(--gold-light);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;color:#fff;
-    font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;
-  }
+  .logo-circle{ width:46px;height:46px;border:2px solid var(--gold-light);border-radius:50%; display:flex;align-items:center;justify-content:center;color:#fff; font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem; }
   .btn-outline-gold{ border:1px solid var(--gold-light); color:#f5f5f5; font-family:'Playfair Display',serif; background:transparent; }
   .btn-outline-gold:hover{ background:var(--gold-light); color:#000; }
 
@@ -40,24 +31,11 @@
   @keyframes blink{ 50%{opacity:0;} }
   .btn-cta{ background:var(--gold); color:var(--dark-green); font-family:'Playfair Display',serif; font-weight:600; padding:.6rem 1.8rem; border:none; }
   .btn-cta:hover{ background:var(--gold-light); color:var(--dark-green); }
-  .btn-ghost{ border:1px solid var(--gold-light); color:#f5f5f5; font-family:'Playfair Display',serif; padding:.6rem 1.8rem; }
-  .btn-ghost:hover{ background:rgba(217,192,138,.15); color:#fff; }
 
   .photo-wrap{ position:relative; width:100%; max-width:300px; margin:0 auto; }
-  .photo-wrap::before{
-    content:""; position:absolute; inset:0; transform:translate(16px,16px);
-    border:2px solid var(--gold-light); border-radius:6px;
-  }
-  .photo-wrap img{
-    position:relative; z-index:1; width:100%; aspect-ratio:1/1; object-fit:cover;
-    border-radius:6px; background:#d9d9d9; display:block;
-  }
-  .photo-badge{
-    position:absolute; z-index:2; left:-14px; bottom:-14px;
-    background:var(--gold); color:var(--dark-green);
-    font-family:'Playfair Display',serif; font-style:italic; font-weight:600;
-    padding:.35rem 1rem; border-radius:30px; font-size:.9rem; box-shadow:0 4px 12px rgba(0,0,0,.3);
-  }
+  .photo-wrap::before{ content:""; position:absolute; inset:0; transform:translate(16px,16px); border:2px solid var(--gold-light); border-radius:6px; }
+  .photo-wrap img{ position:relative; z-index:1; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px; background:#d9d9d9; display:block; }
+  .photo-badge{ position:absolute; z-index:2; left:-14px; bottom:-14px; background:var(--gold); color:var(--dark-green); font-family:'Playfair Display',serif; font-style:italic; font-weight:600; padding:.35rem 1rem; border-radius:30px; font-size:.9rem; box-shadow:0 4px 12px rgba(0,0,0,.3); }
 
   .stats{ background:var(--deep); color:#f5f5f5; }
   .stat{ text-align:center; padding:1.3rem .5rem; border-right:1px solid rgba(217,192,138,.25); }
@@ -66,125 +44,172 @@
   .stat span{ font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:#a9b8ad; }
 
   .section-padding{ padding:3.2rem 0; }
-  .section-title{
-    color:var(--dark-green); font-weight:700; text-transform:uppercase; letter-spacing:.5px;
-    margin-bottom:1.6rem; position:relative; padding-bottom:.7rem;
-  }
+  .section-title{ color:var(--dark-green); font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:1.6rem; position:relative; padding-bottom:.7rem; }
   .section-title::after{ content:""; position:absolute; left:0; bottom:0; width:48px; height:3px; background:var(--gold); }
   .text-center .section-title::after, .section-title.center::after{ left:50%; transform:translateX(-50%); }
-  .box{
-    background:#fff; border-radius:10px; padding:1.6rem; height:100%;
-    box-shadow:0 6px 24px rgba(27,51,38,.08); border:1px solid #e7ecdc;
-  }
-  .badge-dean{
-    background:var(--dark-green); color:var(--gold-light); font-family:'Playfair Display',serif;
-    font-style:italic; font-size:.85rem; padding:.4rem 1rem; border-radius:30px; display:inline-block;
-  }
-  .chip{
-    display:inline-block; background:var(--light-green-bg); border:1px solid #dde6cf;
-    color:var(--mid-green); border-radius:6px; padding:.25rem .7rem; font-size:.85rem; margin:0 .3rem .5rem 0;
-  }
+  .box{ background:#fff; border-radius:10px; padding:1.6rem; height:100%; box-shadow:0 6px 24px rgba(27,51,38,.08); border:1px solid #e7ecdc; }
+  .badge-dean{ background:var(--dark-green); color:var(--gold-light); font-family:'Playfair Display',serif; font-style:italic; font-size:.85rem; padding:.4rem 1rem; border-radius:30px; display:inline-block; }
+  .chip{ display:inline-block; background:var(--light-green-bg); border:1px solid #dde6cf; color:var(--mid-green); border-radius:6px; padding:.25rem .7rem; font-size:.85rem; margin:0 .3rem .5rem 0; }
   .chip.gold{ background:#f6efdc; border-color:var(--gold-light); color:#7a5f14; }
   .mini{ font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:.6rem; display:block; }
-
-  .skill-card{
-    background:#fff; border:1px solid #e7ecdc; border-radius:12px; padding:1.8rem 1.5rem; height:100%;
-    box-shadow:0 6px 24px rgba(27,51,38,.08); position:relative; overflow:hidden; transition:all .25s ease;
-  }
-  .skill-card::before{
-    content:""; position:absolute; top:0; left:0; right:0; height:4px;
-    background:linear-gradient(90deg,var(--gold),var(--gold-light));
-  }
-  .skill-card:hover{ transform:translateY(-6px); box-shadow:0 14px 32px rgba(27,51,38,.16); border-color:var(--gold-light); }
-  .skill-icon{
-    width:60px; height:60px; border-radius:50%; background:var(--dark-green); color:var(--gold-light);
-    display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:1rem;
-    border:2px solid var(--gold-light); transition:all .25s ease;
-  }
-  .skill-card:hover .skill-icon{ background:var(--gold); color:var(--dark-green); }
-  .skill-card h3{ font-size:1.2rem; font-weight:700; color:var(--dark-green); margin-bottom:.3rem; }
-  .skill-card .skill-sub{ font-size:.85rem; color:#7a8a7e; margin-bottom:1rem; }
-  .skill-list{ list-style:none; padding:0; margin:0; }
-  .skill-list li{
-    display:flex; align-items:center; gap:.6rem; padding:.45rem 0; font-size:.92rem;
-    border-bottom:1px dashed #e3e8d8;
-  }
-  .skill-list li:last-child{ border-bottom:none; }
-  .skill-list li i{ color:var(--gold); font-size:.95rem; }
-
-  .project-card{ display:flex; flex-direction:column; transition:all .2s ease; }
-  .project-card:hover{ transform:translateY(-3px); border-color:var(--gold-light); }
-  .project-thumb{
-    width:100%; aspect-ratio:16/9; border-radius:8px; background:var(--light-green-bg);
-    border:1px solid #e7ecdc; display:flex; align-items:center; justify-content:center;
-    color:var(--mid-green); font-family:'Playfair Display',serif; font-style:italic; margin-bottom:1rem; overflow:hidden;
-  }
-  .project-thumb img{ width:100%; height:100%; object-fit:cover; object-position:center center; }
-  .type-tag{ align-self:flex-start; display:inline-flex; align-items:center; gap:.4rem; background:var(--dark-green); color:var(--gold-light); font-family:'Playfair Display',serif; font-style:italic; font-size:.8rem; padding:.25rem .8rem; border-radius:30px; margin-bottom:.6rem; }
-  .project-card.box{ padding:.9rem; }
-  .project-card .chip{ font-size:.72rem; padding:.15rem .5rem; margin:0 .25rem .35rem 0; }
-  .project-thumb{ margin-bottom:.7rem; }
-  .type-tag{ font-size:.72rem !important; padding:.2rem .65rem !important; }
-  .project-card h3{ font-size:1rem; font-weight:700; color:var(--dark-green); }
-  .project-card p{ font-size:.8rem; line-height:1.45; color:#5a6b5e; }
-  .project-card .btn{ margin-top:auto; align-self:flex-start; }
-
   .alt{ background:var(--light-green-bg); }
+
   .lj{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; max-width:1000px; margin:0 auto; }
-  .lj-card{
-    background:#fff; border:1px solid #e7ecdc; border-top:3px solid var(--gold);
-    border-radius:10px; padding:.9rem 1rem; font-size:.85rem; line-height:1.45;
-    box-shadow:0 4px 14px rgba(27,51,38,.06); transition:all .2s ease;
-  }
+  .lj-card{ background:#fff; border:1px solid #e7ecdc; border-top:3px solid var(--gold); border-radius:10px; padding:.9rem 1rem; font-size:.85rem; line-height:1.45; box-shadow:0 4px 14px rgba(27,51,38,.06); transition:all .2s ease; }
   .lj-card:hover{ transform:translateY(-3px); border-color:var(--gold-light); }
   .lj-card strong{ display:block; font-family:'Playfair Display',serif; font-size:1rem; color:var(--dark-green); }
   .lj-card .school{ display:block; margin-top:.4rem; font-size:.75rem; color:#7a9b6e; font-style:italic; }
   @media (max-width:991px){ .lj{ grid-template-columns:repeat(2,1fr); } }
 
-  .story-section{ background:var(--dark-green); color:#f5f5f5; overflow:hidden; }
+  .story-section{ color:#f5f5f5; overflow:hidden; }
   .story-section .section-title{ color:#f5f5f5; }
-  .book-link{ display:block; width:240px; margin:1.5rem auto 1rem; text-decoration:none; perspective:900px; }
-  .book-closed{
-    height:330px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:1.5rem;
-    background:linear-gradient(135deg,var(--mid-green),var(--deep)); border:2px solid var(--gold-light);
-    border-left:12px solid var(--gold); border-radius:4px 10px 10px 4px; transform-origin:left center;
-    box-shadow:0 18px 40px rgba(0,0,0,.5), 0 0 22px rgba(201,162,58,.35);
-    animation:coverGlow 2.5s ease-in-out infinite alternate; transition:transform .5s ease;
-  }
-  .book-link:hover .book-closed{ transform:rotateY(-22deg) translateY(-6px); }
-  .book-closed i{ font-size:2.6rem; color:var(--gold-light); margin-bottom:1rem; }
-  .book-closed h3{ font-size:1.6rem; color:#f5f5f5; margin-bottom:.4rem; }
-  .book-closed small{ color:var(--gold-light); font-style:italic; font-family:'Playfair Display',serif; }
-  @keyframes coverGlow{
-    from{ box-shadow:0 18px 40px rgba(0,0,0,.5), 0 0 14px rgba(201,162,58,.3); }
-    to{ box-shadow:0 18px 40px rgba(0,0,0,.5), 0 0 42px rgba(217,192,138,.8); }
-  }
   .book-hint{ text-align:center; color:var(--gold-light); font-size:.85rem; letter-spacing:.05em; }
 
-  ul.dots{ padding-left:1.2rem; margin:0; }
-  ul.dots li{ padding:.25rem 0; }
+  .skill-card{ background:#fff; border:1px solid #e7ecdc; border-radius:12px; padding:1.8rem 1.5rem; height:100%; box-shadow:0 6px 24px rgba(27,51,38,.08); position:relative; overflow:hidden; transition:all .25s ease; }
+  .skill-card::before{ content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--gold),var(--gold-light)); }
+  .skill-card:hover{ transform:translateY(-6px); box-shadow:0 14px 32px rgba(27,51,38,.16); border-color:var(--gold-light); }
+  .skill-icon{ width:60px; height:60px; border-radius:50%; background:var(--dark-green); color:var(--gold-light); display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:1rem; border:2px solid var(--gold-light); transition:all .25s ease; }
+  .skill-card:hover .skill-icon{ background:var(--gold); color:var(--dark-green); }
+  .skill-card h3{ font-size:1.2rem; font-weight:700; color:var(--dark-green); margin-bottom:.3rem; }
+  .skill-card .skill-sub{ font-size:.85rem; color:#7a8a7e; margin-bottom:1rem; }
+  .skill-list{ list-style:none; padding:0; margin:0; }
+  .skill-list li{ display:flex; align-items:center; gap:.6rem; padding:.45rem 0; font-size:.92rem; border-bottom:1px dashed #e3e8d8; }
+  .skill-list li:last-child{ border-bottom:none; }
+  .skill-list li i{ color:var(--gold); font-size:.95rem; }
 
-  .hobby{
-    background:#fff; border:1px solid #e3e3e3; border-radius:10px; min-height:90px; padding:1rem;
-    display:flex; align-items:center; justify-content:center; text-align:center; font-weight:500; transition:all .2s ease;
-  }
-  .hobby:hover{ border-color:var(--gold-light); box-shadow:0 4px 12px rgba(0,0,0,.06); transform:translateY(-2px); }
+  .project-card{ display:flex; flex-direction:column; transition:all .2s ease; }
+  .project-card:hover{ transform:translateY(-3px); border-color:var(--gold-light); }
+  .project-thumb{ width:100%; aspect-ratio:16/9; border-radius:8px; background:var(--light-green-bg); border:1px solid #e7ecdc; display:flex; align-items:center; justify-content:center; color:var(--mid-green); margin-bottom:.7rem; overflow:hidden; }
+  .project-thumb img{ width:100%; height:100%; object-fit:cover; object-position:center center; }
+  .type-tag{ align-self:flex-start; display:inline-flex; align-items:center; gap:.4rem; background:var(--dark-green); color:var(--gold-light); font-family:'Playfair Display',serif; font-style:italic; font-size:.72rem; padding:.2rem .65rem; border-radius:30px; margin-bottom:.6rem; }
+  .project-card.box{ padding:.9rem; }
+  .project-card .chip{ font-size:.72rem; padding:.15rem .5rem; margin:0 .25rem .35rem 0; }
+  .project-card h3{ font-size:1rem; font-weight:700; color:var(--dark-green); }
+  .project-card p{ font-size:.8rem; line-height:1.45; color:#5a6b5e; }
 
+  .hobby{ background:#fff; border:1px solid #e3e3e3; border-radius:10px; min-height:90px; padding:1rem; display:flex; align-items:center; justify-content:center; text-align:center; font-weight:500; transition:all .2s ease; }
+  .hobby:hover{ border-color:var(--gold-light); transform:translateY(-2px); }
   .num{ font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:var(--gold-light); line-height:1; }
-  .value h3{ font-size:1.1rem; font-weight:700; margin:.4rem 0; }
-  .value p{ color:#5a6b5e; font-size:.9rem; margin:0; }
 
   .footer-section{ background:var(--dark-green); color:#f5f5f5; }
   .footer-section h6{ color:var(--gold-light); text-transform:uppercase; letter-spacing:1px; }
-  .footer-label{ color:var(--gold-light); font-weight:600; min-width:80px; display:inline-block; }
-  .footer-section .form-control{ border-radius:6px; border:none; padding:.7rem 1rem; }
-  .quote-block{ border-left:3px solid var(--gold-light); padding-left:1rem; font-family:'Playfair Display',serif; font-style:italic; color:var(--gold-light); }
-  .footer-bottom{ background:var(--deep); color:#a9b8ad; font-size:.85rem; text-align:center; padding:1rem 0; }
+  .footer-bottom{ background:var(--deep); color:#a9b8ad; font-size:.85rem; padding:1rem 0; }
 
   @media (max-width:767px){
     .hero h1{ font-size:2.1rem; }
     .stat{ border-right:none; border-bottom:1px solid rgba(217,192,138,.2); }
   }
+</style>
+<style>
+  .sa{ background:radial-gradient(ellipse at 50% 30%, var(--mid-green), var(--dark-green) 55%, var(--deep)); }
+  .sa-pill{ display:inline-flex; align-items:center; gap:.4rem; border:1px solid rgba(217,192,138,.5); border-radius:30px; padding:.2rem .9rem; font:italic .75rem 'Playfair Display',serif; color:var(--gold-light); background:rgba(0,0,0,.2); }
+  .sa-book{ display:block; width:230px; height:310px; margin:1.8rem auto 1rem; position:relative; text-decoration:none; color:#f5f5f5; border:1px solid var(--gold-light); border-left:14px solid var(--gold); border-radius:6px 14px 14px 6px; background:linear-gradient(135deg,var(--mid-green),var(--deep)); box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 30px rgba(201,162,58,.3); transition:transform .3s ease; }
+  .sa-book:hover{ transform:translateY(-6px) rotate(-1deg); color:#fff; }
+  .sa-book .ring{ width:56px; height:56px; border:1px solid var(--gold-light); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:var(--gold-light); margin:2.4rem auto 1rem; }
+  .sa-book h3{ font-size:1.5rem; margin:0; }
+  .sa-book small{ color:var(--gold-light); font-style:italic; font-family:'Playfair Display',serif; }
+  .sa-book .foot{ position:absolute; left:1rem; right:1rem; bottom:.9rem; border-top:1px solid rgba(217,192,138,.3); padding-top:.6rem; display:flex; justify-content:space-between; font-size:.72rem; color:#cdd8cf; }
+  .sa-card{ display:block; width:100%; text-align:left; background:rgba(10,20,15,.55); border:1px solid rgba(217,192,138,.25); border-radius:12px; padding:1rem 1.1rem; color:#f5f5f5; transition:border-color .2s, transform .2s; }
+  .sa-card:hover{ border-color:var(--gold); transform:translateY(-3px); color:#fff; }
+  .sa-card .g{ font:italic .72rem 'Playfair Display',serif; color:var(--gold-light); }
+  .sa-card h4{ font-size:1.1rem; margin:.3rem 0; }
+  .sa-card p{ font-size:.8rem; color:#b7c4ba; margin:0 0 .8rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .sa-card .f{ display:flex; justify-content:space-between; font-size:.75rem; font-style:italic; color:var(--gold-light); border-top:1px solid rgba(217,192,138,.2); padding-top:.6rem; }
+
+  /* modal */
+  .sa-modal .modal-content{ background:var(--deep); border:2px solid var(--gold-light); border-radius:18px; color:#f5f5f5; }
+  .sa-modal .modal-header{ border-bottom:1px solid rgba(217,192,138,.25); }
+  .sa-modal .modal-title{ font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.15rem; line-height:1.2; }
+  .sa-modal .modal-title small{ display:block; font:300 .72rem 'Poppins',sans-serif; color:#cdd8cf; }
+  .sa-logo{ width:38px; height:38px; border:1px solid var(--gold-light); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-light); margin-right:.8rem; }
+  .sa-paper{ --pg:#f6f8ee; --tx:#1e2a22; --mut:#7a8a7e; border:2px solid var(--gold); border-radius:14px; overflow:hidden; background:var(--pg); color:var(--tx); }
+  .sa-pane{ padding:1.6rem 1.8rem; background:linear-gradient(90deg,#e8edd9,var(--pg) 18%); min-height:430px; display:flex; flex-direction:column; }
+  .sa-pane.l{ background:linear-gradient(270deg,#e8edd9,var(--pg) 18%); }
+  @media (min-width:768px){ .sa-pane.l{ border-right:6px solid var(--gold); } }
+  .sa-pane h5{ font-family:'Playfair Display',serif; font-weight:700; color:var(--dark-green); }
+  .sa-head{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:2px solid var(--gold); padding-bottom:.5rem; margin-bottom:1rem; }
+  .sa-head em{ font:italic .75rem 'Playfair Display',serif; color:var(--mut); }
+  .sa-item{ width:100%; display:flex; justify-content:space-between; align-items:center; text-align:left; background:#fcfdf8; border:1px solid #e1e8d2; border-radius:10px; padding:.7rem 1rem; margin-bottom:.6rem; color:var(--tx); transition:all .2s; }
+  .sa-item b{ display:block; font-family:'Playfair Display',serif; }
+  .sa-item small{ font-size:.75rem; color:var(--mut); }
+  .sa-item:hover{ border-color:var(--gold); }
+  .sa-item.on{ background:var(--dark-green); border-color:var(--gold); color:#fff; }
+  .sa-item.on b{ color:var(--gold-light); } .sa-item.on small{ color:#d3ddd5; }
+  .sa-quote{ margin-top:auto; border-top:1px solid #cfd8bd; padding-top:.8rem; text-align:center; font:italic .78rem 'Playfair Display',serif; color:var(--mut); }
+  .sa-blurb{ background:#fcfdf8; border:1px solid #e1e8d2; border-radius:10px; padding:.9rem 1rem; font-style:italic; font-size:.9rem; margin:.7rem 0 1rem; }
+  .sa-start{ width:100%; background:var(--dark-green); color:var(--gold-light); border:1px solid var(--gold); border-radius:999px; padding:.7rem; font:600 .9rem 'Playfair Display',serif; }
+  .sa-start:hover{ background:var(--gold); color:var(--deep); }
+  .sa-chaps{ max-height:190px; overflow-y:auto; margin-top:.4rem; }
+  .sa-ch{ width:100%; display:flex; justify-content:space-between; align-items:center; background:none; border:0; border-bottom:1px dashed #d3dcc0; padding:.5rem .3rem; text-align:left; color:var(--tx); }
+  .sa-ch:hover{ background:rgba(201,162,58,.12); }
+  .sa-ch b{ font:700 .85rem 'Playfair Display',serif; } .sa-ch small{ color:var(--mut); margin-left:.4rem; font-size:.72rem; }
+  .sa-ch .ok{ color:#14915a; font-size:.72rem; font-weight:600; }
+  .sa-label{ font:700 .75rem 'Playfair Display',serif; letter-spacing:.1em; color:var(--mut); text-transform:uppercase; border-top:1px solid #cfd8bd; padding-top:.7rem; }
+  .sa-by{ display:flex; justify-content:space-between; font-size:.75rem; color:var(--mut); border-top:1px solid #cfd8bd; padding-top:.6rem; margin-top:.6rem; } .sa-by i{ color:#b08d22; }
+
+  /* reader */
+  .sa-reader{ background:#f6f8ee; color:#1e2a22; border-radius:14px; border:2px solid var(--gold); }
+  .sa-rbar{ display:flex; align-items:center; gap:.6rem; padding:.6rem 1rem; border-bottom:1px solid #d3dcc0; position:sticky; top:0; background:#eaf0de; border-radius:12px 12px 0 0; z-index:2; }
+  .sa-rbar .t{ flex:1; text-align:center; font:600 .9rem 'Playfair Display',serif; line-height:1.2; } .sa-rbar .t small{ display:block; font:italic .7rem 'Poppins'; color:#7a8a7e; }
+  .sa-rbar button{ background:none; border:1px solid var(--gold); border-radius:8px; padding:.15rem .6rem; font-family:'Playfair Display',serif; color:#1e2a22; }
+  .sa-rbar button:hover{ background:var(--gold); }
+  .sa-text{ max-width:660px; margin:0 auto; padding:2rem 1.2rem 1rem; font-weight:300; line-height:1.9; font-size:var(--fs,17px); }
+  .sa-text h2{ font-family:'Playfair Display',serif; text-align:center; font-size:1.6em; color:var(--dark-green); }
+  .sa-text .orn{ text-align:center; color:var(--gold); margin-bottom:1.4rem; }
+  .sa-text p.end{ text-align:center; color:#7a8a7e; letter-spacing:.12em; font-size:.8em; margin:.2rem 0; }
+  .sa-rnav{ display:flex; gap:.6rem; justify-content:center; padding:1rem 0 2rem; flex-wrap:wrap; }
+  .sa-rnav button{ background:var(--dark-green); color:#fff; border:1px solid var(--gold); border-radius:999px; padding:.5rem 1.2rem; font-size:.85rem; }
+  .sa-rnav button:hover:not(:disabled){ background:var(--gold); color:var(--deep); } .sa-rnav button:disabled{ opacity:.35; }
+</style>
+<style>
+  .sec-pill{ display:inline-flex; align-items:center; gap:.4rem; background:#e2e9d6; color:var(--mid-green); font:600 .8rem 'Playfair Display',serif; border-radius:30px; padding:.3rem .9rem; margin-bottom:.7rem; }
+  .sec-sub{ max-width:560px; margin:-.8rem auto 2rem; color:#5a6b5e; }
+  .chip i{ color:var(--gold); margin-right:.3rem; font-size:.8rem; }
+  .chip.org{ background:#eef2e6; border-color:#dde6cf; color:var(--dark-green); }
+  .chip.org i{ color:var(--mid-green); }
+  .about-quote{ background:#eef2e6; border-left:4px solid var(--gold); border-radius:6px; padding:.9rem 1rem; font:italic .9rem 'Playfair Display',serif; color:var(--mid-green); }
+  .badge-dean i{ color:var(--gold); }
+
+  /* work */
+  .wx{ position:relative; padding:2rem 2rem 1.6rem; }
+  .wx-tab{ position:absolute; top:0; right:0; background:var(--gold); color:var(--dark-green); font:700 .8rem 'Playfair Display',serif; padding:.4rem 1rem; border-radius:0 10px 0 12px; }
+  .wx h3 span{ color:#a8832a; }
+  .wx-meta{ display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; font-size:.85rem; color:#6b7a6f; padding-bottom:1rem; border-bottom:1px solid #e7ecdc; margin-bottom:1rem; }
+  .wx-meta i{ color:var(--gold); margin-right:.3rem; }
+  .wx ul{ padding-left:1.2rem; } .wx li{ padding:.3rem 0; } .wx li::marker{ color:var(--gold); }
+  .wx .foot{ border-top:1px solid #e7ecdc; padding-top:1rem; margin-top:1rem; }
+
+  /* hobbies */
+  .hobby{ flex-direction:column; gap:.5rem; box-shadow:0 4px 14px rgba(27,51,38,.06); }
+  .hobby i{ width:36px; height:36px; border-radius:50%; background:#f6efdc; color:var(--gold); display:flex; align-items:center; justify-content:center; }
+
+  /* values */
+  .pillar{ background:#fff; border:1px solid #e7ecdc; border-radius:14px; padding:1.5rem; height:100%; box-shadow:0 4px 14px rgba(27,51,38,.06); transition:transform .2s; }
+  .pillar:hover{ transform:translateY(-3px); }
+  .pillar .num{ font-size:2.6rem; margin-bottom:.4rem; }
+  .pillar h3{ font-size:1.1rem; font-weight:700; color:var(--dark-green); }
+  .pillar p{ font-size:.88rem; color:#5a6b5e; }
+  .pillar .tag{ border-top:1px solid #eef0e6; padding-top:.6rem; text-align:right; font:.65rem/1 monospace; letter-spacing:.15em; text-transform:uppercase; color:#b08d22; }
+
+  /* contact */
+  .c-row{ display:flex; align-items:center; gap:1rem; background:#141f19; border:1px solid rgba(217,192,138,.2); border-radius:14px; padding:.9rem 1rem; margin-bottom:.9rem; }
+  .c-ico{ width:42px; height:42px; flex:none; border-radius:50%; border:1px solid rgba(217,192,138,.35); background:rgba(47,79,62,.5); display:flex; align-items:center; justify-content:center; color:var(--gold-light); }
+  .c-row small{ display:block; font:600 .65rem 'Poppins',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#9fb0a4; }
+  .c-row b{ font-weight:500; word-break:break-all; }
+  .c-btn{ margin-left:auto; width:36px; height:36px; flex:none; border:0; border-radius:8px; background:rgba(255,255,255,.06); color:var(--gold-light); display:flex; align-items:center; justify-content:center; text-decoration:none; }
+  .c-btn:hover{ background:var(--gold); color:var(--deep); }
+  .quote-block{ background:#141f19; border-radius:12px; padding:1rem 1.2rem; border-left:4px solid var(--gold-light); }
+  .msg-card{ background:#141f19; border:1px solid rgba(217,192,138,.2); border-radius:18px; padding:2rem; box-shadow:0 12px 30px rgba(0,0,0,.25); }
+  .msg-card h3{ font-size:1.6rem; margin:0; }
+  .msg-card label{ font:600 .8rem 'Playfair Display',serif; color:var(--gold-light); margin-bottom:.3rem; }
+  .msg-card .form-control{ background:#1b3326; border:1px solid #2f4f3e; color:#fff; border-radius:8px; }
+  .msg-card .form-control::placeholder{ color:#6f8578; }
+  .msg-card .form-control:focus{ border-color:var(--gold); box-shadow:0 0 0 .2rem rgba(201,162,58,.2); }
+  .footer-bottom{ text-align:left; }
+  .footer-bottom small{ color:#7f9a86; }
+  .footer-bottom a{ color:#cdd8cf; text-decoration:none; }
+  .footer-bottom .top{ border:1px solid rgba(217,192,138,.4); color:var(--gold-light); border-radius:30px; padding:.35rem 1rem; }
+  .footer-bottom .top:hover{ background:var(--gold-light); color:var(--deep); }
 </style>
 </head>
 <body>
@@ -247,21 +272,22 @@
     <div class="row g-4">
       <div class="col-lg-6">
         <h2 class="section-title h4">About Me</h2>
-        <div class="box">
-          <p>I am a third-year Bachelor of Science in Information Technology student at Polytechnic University of the Philippines &ndash; Sto. Tomas Campus.</p>
+        <div class="box d-flex flex-column">
+          <p>I am a third-year <strong>Bachelor of Science in Information Technology (BSIT)</strong> student at the <strong>Polytechnic University of the Philippines &ndash; Sto. Tomas Campus</strong>.</p>
           <p>I may not be the most naturally talented person, but I believe that when I set my mind on something, I can make it work. I love learning new things and I always give my full effort no matter the challenge.</p>
-          <p class="mb-0">Outside of school, I enjoy learning musical instruments, singing, writing, reading, and helping out at home.</p>
+          <p>Outside of school, I enjoy learning musical instruments, singing, writing creative stories, reading, and helping out with household activities at home.</p>
+          <div class="about-quote mt-auto">"I believe that hard work and determination matter more than natural talent."</div>
         </div>
       </div>
       <div class="col-lg-6">
         <h2 class="section-title h4">Academic Achievements</h2>
         <div class="box">
-          <span class="badge-dean mb-3">Dean's Lister</span>
-          <p>Recognized for consistent performance throughout the BSIT program at PUP Sto. Tomas.</p>
-          <span class="mini">Strengths</span>
-          <span class="chip gold">Information Technology</span><span class="chip gold">Team Collaboration</span><span class="chip gold">Communication</span><span class="chip gold">Problem Solving</span><span class="chip gold">Time Management</span>
-          <span class="mini mt-2">Organizations</span>
-          <span class="chip">Supreme Student Government</span><span class="chip">Class Organization</span><span class="chip">Academic Activities &amp; Student Programs</span>
+          <span class="badge-dean mb-3"><i class="bi bi-award me-1"></i> Dean's Lister &mdash; PUP Sto. Tomas <i class="bi bi-stars ms-1"></i></span>
+          <p class="text-secondary small">Recognized for consistent academic performance throughout the Bachelor of Science in Information Technology program at PUP Sto. Tomas Campus.</p>
+          <span class="mini">Core Strengths</span>
+          <span class="chip gold"><i class="bi bi-check-circle"></i>Information Technology</span><span class="chip gold"><i class="bi bi-check-circle"></i>Team Collaboration</span><span class="chip gold"><i class="bi bi-check-circle"></i>Communication</span><span class="chip gold"><i class="bi bi-check-circle"></i>Problem Solving</span><span class="chip gold"><i class="bi bi-check-circle"></i>Time Management</span><span class="chip gold"><i class="bi bi-check-circle"></i>Front-End Web Design</span><span class="chip gold"><i class="bi bi-check-circle"></i>Adaptability &amp; Empathy</span>
+          <span class="mini mt-3">Campus Organizations</span>
+          <span class="chip org"><i class="bi bi-buildings"></i>Supreme Student Government (SSG)</span><span class="chip org"><i class="bi bi-buildings"></i>Computer Society (COMSOC)</span><span class="chip org"><i class="bi bi-buildings"></i>Class Organization Executive Board</span><span class="chip org"><i class="bi bi-buildings"></i>Academic Activities &amp; Student Programs</span>
         </div>
       </div>
     </div>
@@ -285,64 +311,108 @@
 </section>
 
 <section class="section-padding">
-  <div class="container">
-    <h2 class="section-title h4 center text-center">Work Experience</h2>
-    <div class="row justify-content-center">
+  <div class="container text-center">
+    <span class="sec-pill"><i class="bi bi-briefcase"></i> Professional Work Experience</span>
+    <h2 class="section-title h4 center">Work Experience</h2>
+    <p class="sec-sub">Developing frontline grit, teamwork, and composure in high-speed, customer-centric environments.</p>
+    <div class="row justify-content-center text-start">
       <div class="col-lg-8">
-        <div class="box">
-          <h3 class="h5 fw-bold mb-1">Service Crew &mdash; McDonald's</h3>
-          <div class="text-muted small mb-3">Tanauan&ndash;Talisay Road &middot; August 2025 &ndash; November 2026</div>
-          <ul class="dots"><li>Assisted customers professionally</li><li>Maintained cleanliness of work areas</li><li>Prepared food per company standards</li><li>Worked in a fast-paced environment</li><li>Collaborated with team members</li></ul>
+        <div class="box wx">
+          <span class="wx-tab"><i class="bi bi-clock-history me-1"></i>1+ Year</span>
+          <h3 class="h3 fw-bold mb-2">Service Crew &mdash; <span>McDonald's</span></h3>
+          <div class="wx-meta"><span><i class="bi bi-geo-alt"></i>Tanauan&ndash;Talisay Road, Batangas</span><span><i class="bi bi-calendar3"></i>August 2025 &ndash; November 2026</span></div>
+          <ul>
+            <li>Assisted customers professionally with a warm, courteous attitude and high order accuracy.</li>
+            <li>Maintained impeccable cleanliness and sanitary order across prep and dining stations.</li>
+            <li>Prepared food in compliance with strict corporate quality, temperature, and hygiene benchmarks.</li>
+            <li>Operated effectively in high-pressure, fast-paced rush hours without sacrificing attention to detail.</li>
+            <li>Collaborated seamlessly with managers and fellow crew to optimize kitchen-to-counter speed.</li>
+          </ul>
+          <div class="foot">
+            <span class="mini">Core Competencies &amp; Work Ethic</span>
+            <span class="chip gold"><i class="bi bi-check-circle"></i>Customer Relations</span><span class="chip gold"><i class="bi bi-check-circle"></i>Fast-Paced Multitasking</span><span class="chip gold"><i class="bi bi-check-circle"></i>Teamwork Under Pressure</span><span class="chip gold"><i class="bi bi-check-circle"></i>Food Safety Standards</span><span class="chip gold"><i class="bi bi-check-circle"></i>Workplace Discipline</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <section class="section-padding alt">
-  <div class="container">
-    <h2 class="section-title h4 center text-center">Hobbies &amp; Interests</h2>
+  <div class="container text-center">
+    <h2 class="section-title h4 center">Hobbies &amp; Interests</h2>
+    <p class="sec-sub">What fuels my creativity, keeps me balanced, and inspires my daily routine.</p>
     <div class="row g-3">
-      <div class="col-6 col-md-3"><div class="hobby">Learning Musical Instruments</div></div>
-      <div class="col-6 col-md-3"><div class="hobby">Singing</div></div>
-      <div class="col-6 col-md-3"><div class="hobby">Reading</div></div>
-      <div class="col-6 col-md-3"><div class="hobby">Writing</div></div>
-      <div class="col-6 col-md-4"><div class="hobby">Household Activities</div></div>
-      <div class="col-6 col-md-4"><div class="hobby">Travelling</div></div>
-      <div class="col-12 col-md-4"><div class="hobby">Photography</div></div>
+      <div class="col-6 col-md-3"><div class="hobby"><i class="bi bi-music-note-beamed"></i>Learning Musical Instruments</div></div>
+      <div class="col-6 col-md-3"><div class="hobby"><i class="bi bi-mic"></i>Singing</div></div>
+      <div class="col-6 col-md-3"><div class="hobby"><i class="bi bi-book"></i>Reading</div></div>
+      <div class="col-6 col-md-3"><div class="hobby"><i class="bi bi-feather"></i>Writing</div></div>
+      <div class="col-6 col-md-4"><div class="hobby"><i class="bi bi-house"></i>Household Activities</div></div>
+      <div class="col-6 col-md-4"><div class="hobby"><i class="bi bi-compass"></i>Travelling</div></div>
+      <div class="col-12 col-md-4"><div class="hobby"><i class="bi bi-camera"></i>Photography</div></div>
     </div>
   </div>
 </section>
-
 <section class="section-padding">
-  <div class="container">
-    <h2 class="section-title h4 center text-center">Personal Values</h2>
-    <div class="row g-4 mt-1">
-      <div class="col-6 col-md-3 value"><div class="num">01</div><h3>Determined</h3><p>I keep going toward my goals no matter how hard the road gets.</p></div>
-      <div class="col-6 col-md-3 value"><div class="num">02</div><h3>Responsible</h3><p>I take ownership of my tasks and commitments.</p></div>
-      <div class="col-6 col-md-3 value"><div class="num">03</div><h3>Growth-Oriented</h3><p>I continuously seek opportunities to learn and improve.</p></div>
-      <div class="col-6 col-md-3 value"><div class="num">04</div><h3>Service-Driven</h3><p>I find fulfillment in helping and contributing to others.</p></div>
+  <div class="container text-center">
+    <h2 class="section-title h4 center">Personal Values</h2>
+    <p class="sec-sub">The core principles that guide my decisions, relationships, and leadership approach.</p>
+    <div class="row g-3 text-start">
+      <div class="col-6 col-lg-3"><div class="pillar"><div class="num">01</div><h3>Determined</h3><p>I keep going toward my goals no matter how hard the road gets. Grit and consistency always beat temporary obstacles.</p><div class="tag">Pillar 1</div></div></div>
+      <div class="col-6 col-lg-3"><div class="pillar"><div class="num">02</div><h3>Responsible</h3><p>I take deep ownership of my tasks, academic commitments, and leadership responsibilities. People can rely on my word.</p><div class="tag">Pillar 2</div></div></div>
+      <div class="col-6 col-lg-3"><div class="pillar"><div class="num">03</div><h3>Growth-Oriented</h3><p>I continuously seek opportunities to learn, improve my technical skills, and welcome constructive feedback.</p><div class="tag">Pillar 3</div></div></div>
+      <div class="col-6 col-lg-3"><div class="pillar"><div class="num">04</div><h3>Service-Driven</h3><p>I find fulfillment in helping classmates, assisting customers, and contributing meaningfully to my community and school.</p><div class="tag">Pillar 4</div></div></div>
     </div>
   </div>
 </section>
+<section id="stories" class="section-padding story-section sa">
+  <div class="container text-center">
+    <span class="sa-pill"><i class="bi bi-feather"></i> Creative Writing &amp; Personal Memoirs</span>
+    <h2 class="section-title h4 center text-center mt-3">I Love Writing Stories</h2>
+    <p class="mx-auto" style="max-width:540px;">Writing is my favorite way to escape, imagine, and make sense of the world. It captures the moments, struggles, and friendships that define who we are.</p>
 
-<section id="stories" class="section-padding story-section">
-  <div class="container">
-    <h2 class="section-title h4 center text-center">I Love Writing Stories</h2>
-    <p class="text-center mb-4" style="max-width:560px;margin:0 auto;">
-      Writing is my favorite way to escape, imagine, and make sense of the world.
-    </p>
-    <a href="stories.html" class="book-link" aria-label="Open my stories">
-      <div class="book-closed">
-        <i class="bi bi-book"></i>
-        <h3>My Stories</h3>
-        <small>by Angelica Denise</small>
-      </div>
+    <a href="#" class="sa-book" data-open="0" aria-label="Open my stories">
+      <div class="ring"><i class="bi bi-book"></i></div>
+      <h3>My Stories</h3><small>by Angelica Denise</small>
+      <div class="foot"><span id="saCount">2 Stories Inside</span><i>Open <i class="bi bi-arrow-right"></i></i></div>
     </a>
     <p class="book-hint">Click the book to read my stories</p>
-    <div class="text-center"><a href="stories.html" class="btn btn-cta">Open the Book <i class="bi bi-stars ms-1"></i></a></div>
+    <button class="btn btn-cta" data-open="0">Open the Book <i class="bi bi-stars ms-1"></i></button>
+
+    <div class="d-flex justify-content-between align-items-baseline mt-5 mb-2 text-start">
+      <span class="font-display" style="color:var(--gold-light);font-weight:600;">Featured in Table of Stories</span>
+      <small class="text-white-50">Click any story to start reading</small>
+    </div>
+    <div class="row g-3 text-start" id="saFeatured"></div>
   </div>
 </section>
+
+<div class="modal fade sa-modal" id="saModal" tabindex="-1" aria-labelledby="saTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="sa-logo"><i class="bi bi-feather"></i></div>
+        <h1 class="modal-title" id="saTitle">My Stories Anthology<small>Written &amp; Curated by Angelica Denise Mico Ariola</small></h1>
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-3 p-md-5" id="saBody">
+        <div class="row g-0 sa-paper" id="saBook">
+          <div class="col-md-5 sa-pane l" id="saLeft"></div>
+          <div class="col-md-7 sa-pane" id="saRight"></div>
+        </div>
+        <div class="sa-reader d-none" id="saReader">
+          <div class="sa-rbar">
+            <button data-act="back"><i class="bi bi-arrow-left"></i> Contents</button>
+            <div class="t" id="saRTitle"></div>
+            <button data-act="fsDown" aria-label="Smaller text">A−</button>
+            <button data-act="fsUp" aria-label="Larger text">A+</button>
+          </div>
+          <article class="sa-text" id="saText"></article>
+          <div class="sa-rnav" id="saRNav"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section id="skills" class="section-padding alt">
   <div class="container">
@@ -448,32 +518,42 @@
   </div>
 </section>
 
+<!-- CONTACT FOOTER -->
 <footer id="contact" class="footer-section section-padding">
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-6">
         <h6 class="mb-3">Let's Connect</h6>
-        <p><span class="footer-label">Email</span> ariolaangelicadenise@gmail.com</p>
-        <p><span class="footer-label">Phone</span> 0912 141 2462</p>
-        <p><span class="footer-label">Facebook</span> Angelicadenise Ariola</p>
+        <div class="c-row"><span class="c-ico"><i class="bi bi-envelope"></i></span><div><small>Email</small><b>ariolaangelicadenise@gmail.com</b></div><button type="button" class="c-btn" data-copy="ariolaangelicadenise@gmail.com" aria-label="Copy email"><i class="bi bi-copy"></i></button></div>
+        <div class="c-row"><span class="c-ico"><i class="bi bi-telephone"></i></span><div><small>Phone</small><b>0912 141 2462</b></div><button type="button" class="c-btn" data-copy="09121412462" aria-label="Copy phone number"><i class="bi bi-copy"></i></button></div>
+        <div class="c-row"><span class="c-ico"><i class="bi bi-facebook"></i></span><div><small>Facebook</small><b>Angelicadenise Ariola</b></div><a class="c-btn" href="#" target="_blank" rel="noopener" aria-label="Open Facebook"><i class="bi bi-box-arrow-up-right"></i></a></div>
         <div class="quote-block mt-4">"This world is full of nice people. If you can't find one, be one."</div>
       </div>
       <div class="col-lg-6">
-        <h6 class="mb-3">Send a Message</h6>
-        <form>
+        <form class="msg-card" id="msgForm">
+          <h3 class="font-display">Send a Message</h3>
+          <p class="small text-white-50 mb-3">Leave a note directly for Angelica Denise. I will respond to your email as soon as possible.</p>
           <div class="row g-3 mb-3">
-            <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name"></div>
-            <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email"></div>
+            <div class="col-md-6"><label for="mName">Your Name</label><input id="mName" type="text" class="form-control" placeholder="e.g. Juan Dela Cruz" required></div>
+            <div class="col-md-6"><label for="mEmail">Your Email</label><input id="mEmail" type="email" class="form-control" placeholder="e.g. juan@gmail.com" required></div>
           </div>
-          <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message"></textarea></div>
-          <button type="submit" class="btn btn-cta">Send Message</button>
+          <div class="mb-3"><label for="mMsg">Your Message</label><textarea id="mMsg" class="form-control" rows="5" placeholder="Share your thoughts, opportunity, or questions..." required></textarea></div>
+          <button type="submit" class="btn btn-cta"><i class="bi bi-send me-2"></i>Send Message</button>
         </form>
       </div>
     </div>
   </div>
 </footer>
 
-<div class="footer-bottom">&copy; 2026 Angelica Denise Mico Ariola. All Rights Reserved.</div>
+<div class="footer-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <div><span class="text-white font-display">&copy; 2026 Angelica Denise Mico Ariola. All Rights Reserved.</span><br><small>Polytechnic University of the Philippines &ndash; Sto. Tomas Campus &middot; BSIT</small></div>
+    <div class="d-flex align-items-center gap-3">
+      <a href="https://angelicadeniseariola.github.io/Web-Development/">GitHub WebDev</a>
+      <a href="#home" class="top">Back to top <i class="bi bi-arrow-up ms-1"></i></a>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -489,6 +569,226 @@
     setTimeout(type, delay);
   }
   type();
+</script>
+<script>
+const stories = [
+  {
+    title:"She’s Different", genre:"Drama · Friendship",
+    blurb:"On her first day, a transfer student walks out of the “smartest” class and into the one everyone looks down on. They knew she would bring joy and heartbreak. They trusted her anyway.",
+    chapters:[
+      { name:"Prologue", text:[
+        "The moment she walked through the door, we already knew.",
+        "That she would bring both happiness and great devastation into our lives and hearts.",
+        "We knew, yet we didn't stop her.",
+        "We thought we already knew how hard it is to trust someone, only to be betrayed by them in the end.",
+        "We thought we already knew how much pain it would cost to trust someone, yet we trusted her anyway.",
+        "But those memories of trusting her... we would say they were the best memories we ever had."
+      ]},
+      { name:"Chapter 1", text:[
+        "The hallway outside Grade 10, Class 1 was quiet in the way only a hallway during first period can be. Mr. Santiago stopped in front of the door and turned to the girl trailing a few steps behind him.",
+        "“This is where you’ll be spending the school year,” he said. “Since you’re a transfer student, you don’t have to wear the uniform yet. Any questions?”",
+        "She didn’t answer. Her eyes were on the nameplate above the door, and her face gave away even less.",
+        "“Hmm.”",
+        "That was all he got. Mr. Santiago let out a small breath and decided she was only nervous. Transfer students usually were.",
+        "“Go on in and introduce yourself to the class, all right?”",
+        "He opened the door for her.",
+        "Every head in the room turned at once. The desks were lined up in perfect rows, every back was straight, and the whole class looked as though it had been rehearsing this moment all morning. Maybe it had.",
+        "“Class, stand!” A boy in the front row was the first on his feet. His class president’s pin sat where everyone could see it, and his voice carried the polished confidence of someone used to being listened to. “Good morning, Mr. Santiago!”",
+        "“Good morning, Mr. Santiago!” the rest echoed.",
+        "“And good morning to you, new student.” The president turned to her with a practiced smile. “Welcome to Leticia University. This is Grade 10, Class 1, and we’re glad to have you. Thank you for choosing our school. We hope you’ll have a happy and peaceful year.”",
+        "Applause rippled through the room, neat and perfectly timed.",
+        "It was a good welcome. Most transfer students would have smiled, maybe even blushed. She did neither.",
+        "The clapping thinned out and died. Thirty pairs of eyes waited for her to say something.",
+        "“Can I move to the last section?”",
+        "She didn’t say it to the class. She said it to Mr. Santiago, looking straight at him, as if the speech she had just received was nothing more than background noise.",
+        "Mr. Santiago blinked. “W-what? Did the welcome make you uncomfortable, or...?”",
+        "“No. I just don’t want to be here.” Her voice was flat and steady. “So, can I move to the last section?”",
+        "Before Mr. Santiago could find his words, the president stepped out from behind his desk. The smile was gone.",
+        "“If we made you uncomfortable, you could have just said so. But making a scene on your first day, in front of Mr. Santiago, is disrespectful.” He gave a short, disbelieving laugh. “You’re listed in Class 1. Only the smartest students are placed here, and you want to be moved to the lowest section?”",
+        "Her gaze slid toward him, and the room seemed to grow colder.",
+        "“Watch your mouth. I don’t know you, and I don’t care who you are. I said the last section, because it comes last. Not the lowest.” She took a step forward. “Why do you talk about them as if they’re beneath you? They’re students here too. They pay the same tuition you do.”",
+        "“Because they’re troublemakers!” His composure finally cracked. “They cause problems every single day, and nobody can do anything about it because they pay. So what exactly am I lying about?”",
+        "“The word,” she said, very quietly, “is last. And that was my last warning, you idiot.”",
+        "She turned and walked out. The door slammed behind her hard enough to make half the class flinch, and Mr. Santiago hurried after her.",
+        "“Wait! Please, wait!” He caught up with her halfway down the corridor, a little out of breath. “I’m sorry about how my student spoke to you. But you can’t transfer to the last section. Those students only cause trouble, and they aren’t... well, they aren’t smart like you. You’re in Section 1 for a reason. Just come back to class, and I won’t mention any of this to the Principal.”",
+        "She stopped walking. Not because he had asked her to, but because something inside her had finally given way. Of everything she had heard that morning, his words were the ones that stung most.",
+        "“Mr. Santiago.” She didn’t turn around. “Are you finished?”",
+        "“I— uhm—”",
+        "He never got to finish. She had already crossed the corridor and pushed open the door of the last section.",
+        "Mr. Perez stopped mid-sentence, a piece of chalk still in his hand. Heads lifted from desks. A few students sat up straighter, and one or two stared openly at the stranger in the doorway.",
+        "“Good morning, Mr. Perez. Good morning, students of Leticia University, Grade 10, Class 9.” She drew herself up. “I... am Leticia M. Shio. Not my full name. I’m asking for permission to transfer here from Grade 10, Class 1.”",
+        "Then she bowed, low and formal, and the silence that followed was louder than anything she had said so far.",
+        "END OF CHAPTER 1",
+        "THANK YOU FOR READING..."
+      ]},
+      { name:"Chapter 2", text:[
+        "For a few seconds, nobody in Class 9 moved.",
+        "“L-Leticia?” Mr. Perez finally managed, the chalk forgotten in his hand. “What are you doing?”",
+        "“May I, Mr. Perez?”",
+        "She had answered his question with another question, and the sheer calm of it left him speechless all over again.",
+        "“Hey.” A boy in glasses had risen from his seat by the window. “I don’t care who you are, but don’t be disrespectful to Mr. Perez. He’s still a teacher.”",
+        "She turned toward the voice and studied him for a moment. Then she faced the teacher again and lowered her head. “I’m sorry for my behavior, Mr. Perez. It won’t happen again.”",
+        "A sharp click of shoes sounded from the corridor. Mr. Santiago had followed her all the way here, and his face was tight with irritation.",
+        "“Mr. Perez! I won’t report this to the Principal, but I expect you to deal with it before the day ends. Understood?”",
+        "“Y-yes, Mr. Santiago.”",
+        "Mr. Santiago left with one last disapproving look. Leticia stayed where she was, her eyes fixed on Mr. Perez.",
+        "“Ms. Shio...” the teacher began.",
+        "“Leticia, sir,” she cut in.",
+        "“Oh! Y-yes, sorry.” He cleared his throat and tried again, this time like a teacher. “Leticia, give me one reason why I should accept you into my class. Why would you leave Class 1 for Class 9? You know the difference between the two, don’t you?”",
+        "“The only reason I chose this university,” she said, “is the canteen, you, Mr. Perez, and the twenty guys sitting in front of me.”",
+        "A few of the boys traded looks. None of them had expected to be on that list.",
+        "“This class doesn’t have a single girl,” she went on, sliding her hands into her jacket pockets. “Because it’s the so-called lowest section, full of unmannered boys who only know how to cause trouble. Which I know isn’t true. And they can’t be kicked out, because they pay tuition, and the school stays running because of that tuition.”",
+        "She paused. “And... I’m hungry.”",
+        "She sighed, and as if on cue, the bell rang to announce breaktime.",
+        "“Mr. Perez?”",
+        "“Yes?”",
+        "“I’ll explain my reasons to them later, and to you too, sir. I know you’re not satisfied with my answer.” She shrugged. “And please excuse my behavior. You know I’m always like this.”",
+        "With that, she walked out of the room.",
+        "The boys sat in stunned silence. She had spoken to Mr. Perez as though she had known him for years. And her only reason for attending Leticia University was the canteen, Mr. Perez, and them?",
+        "“Hey?” The voice was soft this time. Every head turned toward the door, where she stood peeking in.",
+        "“Would you like some ice cream? Oh, wait, I shouldn’t have asked.” She counted on her fingers. “Seven chocolate, six strawberry, seven vanilla. Oh! Make it eight, seven, eight, one of each flavor for me. Twenty-three in total.” She tilted her head. “Hmm... Mr. Perez, you don’t like ice cream, right? Should I get you pasta instead?”",
+        "She went quiet, as if waiting for an answer. She didn’t even last a minute.",
+        "“Oops, no need to answer. I’ll just buy it. See you in a bit.” She waved, tucked her hand back into her pocket, and was gone.",
+        "“Mr. Perez?” said a boy, smiling innocently. “I think you need to explain. Something different from her explanation.”",
+        "END OF CHAPTER 2",
+        "THANK YOU FOR READING..."
+      ]}
+    ]
+  },
+  {
+    title:"Angelica’s Notes", genre:"Memoir · Personal Essays",
+    blurb:"A personal collection of essays by Angelica Denise—exploring the myth of natural talent, reflections from 8 leadership stages at 7:00 AM, and real-world discipline learned behind the McDonald's service counter.",
+    chapters:[
+      { name:"Prologue: The Prodigy Myth", text:[
+        "People love prodigy stories.",
+        "We celebrate the child who picked up an instrument at four, or solved complex math problems in their sleep.",
+        "I was never that prodigy. When I first sat in front of an IDE, my fingers froze. When I started singing, my voice shook. When I opened an accounting ledger in elementary school, numbers looked like tangled knots.",
+        "Yet every single milestone I hold dear today was born out of repetition, honest grit, and refusing to quit when things were difficult.",
+        "Talent may be a head start, but determination is the engine that actually finishes the marathon."
+      ]},
+      { name:"Chapter 1: Semicolons at 3:00 AM", text:[
+        "The cursor blinked on an empty line at 1:47 AM in Sto. Tomas.",
+        "Twenty-three red underlines glared back at me—a cascade of syntax errors and unclosed tags that seemed to question my place in tech.",
+        "A younger version of me might have closed the laptop and surrendered to the voice that whispered: 'Maybe this is for the naturally gifted.'",
+        "But somewhere between primary school classroom collections and organizing PUP department events, I learned a simple truth: talent is just a head start. It doesn't walk the rest of the mile for you.",
+        "By 3:15 AM, the terminal printed the green word: 'Compiled successfully.' That quiet glow was proof that determination never fails."
+      ]},
+      { name:"Chapter 2: The Classroom at 7:00 AM", text:[
+        "If you walk into a college classroom when the sun is barely peeking over Mt. Makiling, you will find a rare, untouched quiet.",
+        "The fans are still off. The whiteboard is erased clean from yesterday's algorithms.",
+        "I like arriving first—because someone has to be the one to open the door, turn on the lights, and wipe down the podium.",
+        "Leadership isn't standing on a stage; it's carrying the extra marker so a classmate doesn't panic during their presentation.",
+        "It's staying behind to compile group files so no one misses a deadline. It's noticing who stayed silent in the back row and asking them gently, 'Are you okay with this topic?'",
+        "Titles fade at the end of every school year. But the warmth of feeling heard and looked after stays forever."
+      ]},
+      { name:"Chapter 3: Lessons from the Fryer & the Register", text:[
+        "It is 12:15 PM on a scorching Sunday afternoon at the Tanauan-Talisay crossing.",
+        "The drive-thru headset beeps relentlessly. Four family orders pop up simultaneously on the KVS screen, and the oil fryer timer sounds with an urgent rhythm.",
+        "Working as a service crew while balancing third-year BSIT was one of the steepest challenges I've ever accepted.",
+        "In software engineering, we talk constantly about concurrency, fault tolerance, and clean pipeline architecture.",
+        "At the counter, I saw it in human flesh: the drink station must sync with the burger wrapper; the cashier must communicate with the expeditor.",
+        "It grounded me, taught me respect for honest labor, and gave me the iron discipline to remain calm when systems break under pressure."
+      ]},
+      { name:"Chapter 4: The Architecture of Empathy", text:[
+        "When people ask me what connects computer technology, creative writing, and student leadership, my answer is always the same: people.",
+        "Code is written for humans to use. Stories are written for hearts to feel. Leadership is practiced so others can thrive.",
+        "As I continue my third year in BSIT at PUP Sto. Tomas, I carry this quiet philosophy with me into every project, every line of code, and every encounter.",
+        "“This world is full of nice people. If you can't find one, be one.”",
+        "END OF ANGELICA’S NOTES",
+        "THANK YOU FOR READING..."
+      ]}
+    ]
+  }
+];
+</script>
+<script>
+(function(){
+  const KEY = "angelica_stories_v3";
+  let st = { done:{}, pos:{}, fs:17 };
+  try { st = Object.assign(st, JSON.parse(localStorage.getItem(KEY))); } catch(e){}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch(e){} };
+  const $ = id => document.getElementById(id);
+  const esc = t => String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const kinds = ["Original Fiction by Angelica Denise", "Personal Collection by Angelica Denise"];
+  const mins = c => Math.max(1, Math.round(c.text.join(" ").split(/\s+/).length / 200));
+  const isEnd = t => /^(END OF|THANK YOU FOR READING)/i.test(t);
+  const modal = new bootstrap.Modal($("saModal"));
+  let cur = 0, ch = 0;
+
+  $("saCount").textContent = stories.length + " Stories Inside";
+  $("saFeatured").innerHTML = stories.map((s,i) => `
+    <div class="col-md-6"><button class="sa-card" data-open="${i}">
+      <span class="g">${esc(s.genre)}</span><span class="float-end small font-monospace">${s.chapters.length} chapters</span>
+      <h4 class="font-display">${esc(s.title)}</h4><p>${esc(s.blurb)}</p>
+      <div class="f"><span>Angelica Denise</span><span>Read Story <i class="bi bi-arrow-right"></i></span></div>
+    </button></div>`).join("");
+
+  function renderLeft(){
+    $("saLeft").innerHTML = `<div class="sa-head"><h5 class="m-0">Table of Stories</h5><em>${stories.length} Available</em></div>` +
+      stories.map((s,i) => `<button class="sa-item ${i===cur?"on":""}" data-pick="${i}"><span><b>${esc(s.title)}</b><small>${esc(s.genre)}</small></span><i class="bi bi-arrow-right"></i></button>`).join("") +
+      `<div class="sa-quote">"Writing is my favorite way to imagine and make sense of the world."</div>`;
+  }
+  function renderRight(){
+    const s = stories[cur], p = st.pos[cur];
+    $("saRight").innerHTML = `
+      <h5 class="fs-3"><i class="bi bi-stars" style="color:var(--gold)"></i> ${esc(s.title)}</h5>
+      <small class="fst-italic text-secondary">${esc(s.genre)} · ${kinds[cur] || "By Angelica Denise"}</small>
+      <div class="sa-blurb">"${esc(s.blurb)}"</div>
+      <button class="sa-start" data-read="${p ? p.c : 0}"><i class="bi bi-book"></i> ${p ? "Continue" : "Start"} Reading · ${esc(s.chapters[p ? p.c : 0].name)}</button>
+      <div class="sa-label mt-3">Chapters (${s.chapters.length})</div>
+      <div class="sa-chaps">${s.chapters.map((c,j) => `<button class="sa-ch" data-read="${j}"><span><b>${esc(c.name)}</b><small>~${mins(c)} min read</small></span>${st.done[cur+"-"+j] ? '<span class="ok"><i class="bi bi-check2"></i> Read</span>' : ""}</button>`).join("")}</div>
+      <div class="sa-by"><span>By Angelica Denise</span><i>Select any chapter to read</i></div>`;
+  }
+  function showBook(){
+    $("saReader").classList.add("d-none"); $("saBook").classList.remove("d-none");
+    renderLeft(); renderRight();
+  }
+  function readChapter(j){
+    ch = j; const s = stories[cur], c = s.chapters[j];
+    st.pos[cur] = { c:j }; save();
+    $("saBook").classList.add("d-none"); $("saReader").classList.remove("d-none");
+    $("saReader").style.setProperty("--fs", st.fs + "px");
+    $("saRTitle").innerHTML = `<small>${esc(s.title)}</small>${esc(c.name)}`;
+    $("saText").innerHTML = `<h2>${esc(c.name)}</h2><div class="orn">✦</div>` + c.text.map(t => `<p class="${isEnd(t)?"end":""}">${esc(t)}</p>`).join("");
+    $("saRNav").innerHTML = `<button data-act="prev" ${j>0?"":"disabled"}>‹ Previous</button><button data-act="back">Contents</button><button data-act="next" ${j<s.chapters.length-1?"":"disabled"}>Next Chapter ›</button>`;
+    $("saBody").scrollTop = 0; markIfShort();
+  }
+  function markDone(){ const k = cur+"-"+ch; if(!st.done[k]){ st.done[k] = 1; save(); } }
+  function markIfShort(){ const b = $("saBody"); requestAnimationFrame(() => { if(b.scrollHeight <= b.clientHeight + 40) markDone(); }); }
+  $("saBody").addEventListener("scroll", e => {
+    const b = e.target;
+    if($("saReader").classList.contains("d-none")) return;
+    if(b.scrollTop + b.clientHeight >= b.scrollHeight - 60) markDone();
+  }, { passive:true });
+
+  document.addEventListener("click", e => {
+    const o = e.target.closest("[data-open]");
+    if(o){ e.preventDefault(); cur = +o.dataset.open; showBook(); modal.show(); return; }
+    if(!$("saModal").contains(e.target)) return;
+    const pk = e.target.closest("[data-pick]"); if(pk){ cur = +pk.dataset.pick; renderLeft(); renderRight(); return; }
+    const rd = e.target.closest("[data-read]"); if(rd){ readChapter(+rd.dataset.read); return; }
+    const a = e.target.closest("[data-act]"); if(!a || a.disabled) return;
+    const act = a.dataset.act;
+    if(act === "back") showBook();
+    else if(act === "prev") readChapter(ch - 1);
+    else if(act === "next") readChapter(ch + 1);
+    else { st.fs = Math.min(28, Math.max(14, st.fs + (act === "fsUp" ? 2 : -2))); save(); $("saReader").style.setProperty("--fs", st.fs + "px"); }
+  });
+  $("saModal").addEventListener("hidden.bs.modal", showBook);
+})();
+</script>
+<script>
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); } catch(e){ return; }
+    const i = b.querySelector("i"); i.className = "bi bi-check2";
+    setTimeout(() => i.className = "bi bi-copy", 1500);
+  }));
+  document.getElementById("msgForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const n = mName.value.trim(), m = mEmail.value.trim(), t = mMsg.value.trim();
+    location.href = "mailto:ariolaangelicadenise@gmail.com?subject=" + encodeURIComponent("Portfolio message from " + n) +
+      "&body=" + encodeURIComponent(t + "\n\n" + n + " (" + m + ")");
+  });
 </script>
 </body>
 </html>

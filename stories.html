@@ -23,11 +23,10 @@
     min-height:100vh;
   }
   .stage{ position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; padding:5rem 1rem 3rem; }
-  .back-link{ position:absolute; top:1.2rem; left:1.4rem; z-index:20; color:var(--gold-light); text-decoration:none; font-family:'Playfair Display',serif; }
+  .back-link{ position:absolute; top:1.2rem; left:1.4rem; z-index:20; color:var(--gold-light); text-decoration:none; font-family:'Playfair Display',serif; font-size:1rem; }
   .back-link:hover{ color:#fff; text-shadow:0 0 10px var(--gold); }
   h1{ font-family:'Playfair Display',serif; font-size:clamp(1.6rem,4vw,2.4rem); text-align:center; margin:0 0 .3rem; color:#f5f5f5; text-shadow:0 0 18px rgba(201,162,58,.6); position:relative; z-index:5; }
   .sub{ text-align:center; color:var(--gold-light); margin:0 0 2.2rem; font-size:.9rem; position:relative; z-index:5; }
-
 
   .beam{
     position:absolute; left:50%; bottom:30%; width:min(620px,95vw); height:80vh; transform:translateX(-50%); transform-origin:bottom center;
@@ -41,14 +40,11 @@
   @keyframes beamIn{ from{ opacity:0; transform:translateX(-50%) scaleY(.1); } to{ opacity:1; transform:translateX(-50%) scaleY(1); } }
   @keyframes pulse{ from{ opacity:.7; } to{ opacity:1; } }
 
-
   .spark{ position:absolute; bottom:30%; border-radius:50%; background:var(--gold-light); box-shadow:0 0 10px 3px var(--gold); opacity:0; pointer-events:none; }
   .stage.open .spark{ animation:floatUp linear infinite; }
   @keyframes floatUp{ 0%{ opacity:0; transform:translateY(0) scale(.5); } 20%{ opacity:1; } 100%{ opacity:0; transform:translateY(-62vh) translateX(var(--dx)) scale(1.1); } }
 
-
   .book{
-    /* reader theme variables (paper is the default) */
     --pg-bg:#f6f8ee; --pg-edge:#e3e9d3; --pg-text:#1e2a22; --pg-head:#1b3326; --pg-muted:#7a8a7e; --pg-line:#c9d3b4; --pg-sub:#2f4f3e;
     position:relative; z-index:6; width:min(900px,94vw); height:480px; display:grid; grid-template-columns:1fr 1fr;
     transform:perspective(1500px) rotateX(20deg) translateX(-25%); transform-style:preserve-3d; transition:transform 1.3s ease;
@@ -134,7 +130,6 @@
   .navrow button:hover:not(:disabled){ color:var(--gold); }
   .navrow button:disabled{ opacity:.3; cursor:default; }
 
-  /* story cover / synopsis page */
   .story-top{ display:flex; align-items:center; gap:.5rem; }
   .story-top .orn{ color:var(--gold); font-size:1.1rem; }
   .blurb{ font-size:.85rem; line-height:1.6; margin:.7rem 0 .9rem; color:var(--pg-text); }
@@ -201,7 +196,6 @@
     .wp-title{ display:none; }
     .wp-body{ padding:1.6rem 1.1rem 4rem; }
   }
-
 </style>
 </head>
 <body>
@@ -237,7 +231,6 @@
     </div>
   </div>
   </div>
-
 </div>
 
 <div class="wp" id="wp" data-theme="paper">
@@ -342,26 +335,56 @@
       ]
     },
     {
-      title:"Story Title 2", genre:"Add genre here",
-      blurb:"Ilagay dito ang synopsis ng story.",
+      title:"Angelica’s Notes", genre:"Memoir · Personal Essays",
+      blurb:"A personal collection of essays by Angelica Denise—exploring the myth of natural talent, reflections from 8 leadership stages at 7:00 AM, and real-world discipline learned behind the McDonald's service counter.",
       chapters:[
-        { name:"Prologue", text:["Ilagay dito ang prologue."] },
-        { name:"Chapter 1", text:["Ilagay dito ang Chapter 1."] }
+        { name:"Prologue: The Prodigy Myth", text:[
+          "People love prodigy stories.",
+          "We celebrate the child who picked up an instrument at four, or solved complex math problems in their sleep.",
+          "I was never that prodigy. When I first sat in front of an IDE, my fingers froze. When I started singing, my voice shook. When I opened an accounting ledger in elementary school, numbers looked like tangled knots.",
+          "Yet every single milestone I hold dear today was born out of repetition, honest grit, and refusing to quit when things were difficult.",
+          "Talent may be a head start, but determination is the engine that actually finishes the marathon."
+        ]},
+        { name:"Chapter 1: Semicolons at 3:00 AM", text:[
+          "The cursor blinked on an empty line at 1:47 AM in Sto. Tomas.",
+          "Twenty-three red underlines glared back at me—a cascade of syntax errors and unclosed tags that seemed to question my place in tech.",
+          "A younger version of me might have closed the laptop and surrendered to the voice that whispered: 'Maybe this is for the naturally gifted.'",
+          "But somewhere between primary school classroom collections and organizing PUP department events, I learned a simple truth: talent is just a head start. It doesn't walk the rest of the mile for you.",
+          "By 3:15 AM, the terminal printed the green word: 'Compiled successfully.' That quiet glow was proof that determination never fails."
+        ]},
+        { name:"Chapter 2: The Classroom at 7:00 AM", text:[
+          "If you walk into a college classroom when the sun is barely peeking over Mt. Makiling, you will find a rare, untouched quiet.",
+          "The fans are still off. The whiteboard is erased clean from yesterday's algorithms.",
+          "I like arriving first—because someone has to be the one to open the door, turn on the lights, and wipe down the podium.",
+          "Leadership isn't standing on a stage; it's carrying the extra marker so a classmate doesn't panic during their presentation.",
+          "It's staying behind to compile group files so no one misses a deadline. It's noticing who stayed silent in the back row and asking them gently, 'Are you okay with this topic?'",
+          "Titles fade at the end of every school year. But the warmth of feeling heard and looked after stays forever."
+        ]},
+        { name:"Chapter 3: Lessons from the Fryer & the Register", text:[
+          "It is 12:15 PM on a scorching Sunday afternoon at the Tanauan-Talisay crossing.",
+          "The drive-thru headset beeps relentlessly. Four family orders pop up simultaneously on the KVS screen, and the oil fryer timer sounds with an urgent rhythm.",
+          "Working as a service crew while balancing third-year BSIT was one of the steepest challenges I've ever accepted.",
+          "In software engineering, we talk constantly about concurrency, fault tolerance, and clean pipeline architecture.",
+          "At the counter, I saw it in human flesh: the drink station must sync with the burger wrapper; the cashier must communicate with the expeditor.",
+          "It grounded me, taught me respect for honest labor, and gave me the iron discipline to remain calm when systems break under pressure."
+        ]},
+        { name:"Chapter 4: The Architecture of Empathy", text:[
+          "When people ask me what connects computer technology, creative writing, and student leadership, my answer is always the same: people.",
+          "Code is written for humans to use. Stories are written for hearts to feel. Leadership is practiced so others can thrive.",
+          "As I continue my third year in BSIT at PUP Sto. Tomas, I carry this quiet philosophy with me into every project, every line of code, and every encounter.",
+          "“This world is full of nice people. If you can't find one, be one.”",
+          "END OF ANGELICA’S NOTES",
+          "THANK YOU FOR READING..."
+        ]}
       ]
-    },
-    {
-      title:"Story Title 3", genre:"Add genre here",
-      blurb:"Ilagay dito ang synopsis ng story.",
-      chapters:[ { name:"Prologue", text:["Ilagay dito ang prologue."] } ]
     }
   ];
 
-  /* ---------- saved settings + progress (stays on this device) ---------- */
   const KEY = "angelica_stories_v2";
   let store = {};
   try{ store = JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ store = {}; }
-  store.pos = store.pos || {};    // last place per story: {c: chapter, r: ratio}
-  store.done = store.done || {};  // furthest point reached per chapter: "story-chapter" -> 0..1
+  store.pos = store.pos || {};
+  store.done = store.done || {};
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(store)); }catch(e){} }
 
   const book = document.getElementById("book");
@@ -442,7 +465,6 @@
     anim(reader, "turnR");
   }
 
-  /* ---------- Wattpad-style scrolling reader ---------- */
   const wpScroll = document.getElementById("wpScroll"), wpBody = document.getElementById("wpBody"), wpFill = document.getElementById("wpFill");
   let curCh = 0, pendingRatio = 0, saveT = null;
   const isEnd = t => /^(END OF CHAPTER|THANK YOU FOR READING)/i.test(t);
@@ -526,7 +548,6 @@
     const b = e.target.closest("button[data-j]"); if(b) openChapter(cur, +b.dataset.j, 0);
   });
 
-  /* reader controls */
   wp.addEventListener("click", e => {
     const t = e.target.closest("[data-t]");
     if(t){ store.theme = t.dataset.t; applySettings(); save(); return; }
